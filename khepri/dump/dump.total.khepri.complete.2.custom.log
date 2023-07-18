@@ -1,0 +1,62 @@
+pg_restore: error: could not execute query: ERROR:  schema "khepri" does not exist
+LINE 6:     NULL::khepri.statut_projet AS statut_projet,
+                  ^
+Command was: CREATE OR REPLACE VIEW khepri.v_dto_dates_travaux AS
+SELECT
+    NULL::uuid AS id_station,
+    NULL::uuid AS id_travaux,
+    NULL::uuid AS id_projet,
+    NULL::khepri.statut_projet AS statut_projet,
+    NULL::khepri.activite_fournisseur AS role_consultation_entreprise,
+    NULL::uuid AS id_entreprise,
+    NULL::timestamp without time zone AS dt_creation_travaux,
+    NULL::boolean AS dt_validees_filled_in,
+    NULL::boolean AS dt_reelles_filled_in,
+    NULL::timestamp without time zone AS date_validee_debut_travaux,
+    NULL::timestamp without time zone AS date_validee_fin_travaux,
+    NULL::timestamp without time zone AS date_validee_debut_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_validee_fin_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_validee_debut_livraison,
+    NULL::timestamp without time zone AS date_validee_fin_livraison,
+    NULL::timestamp without time zone AS date_reelle_debut_travaux,
+    NULL::timestamp without time zone AS date_reelle_fin_travaux,
+    NULL::timestamp without time zone AS date_reelle_debut_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_reelle_fin_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_reelle_debut_livraison,
+    NULL::timestamp without time zone AS date_reelle_fin_livraison,
+    NULL::boolean AS attente_devis;
+pg_restore: error: could not execute query: ERROR:  schema "khepri" does not exist
+LINE 8:     NULL::khepri.type_travaux AS typetravaux_consultation,
+                  ^
+Command was: CREATE OR REPLACE VIEW khepri.v_dto_consultation AS
+SELECT
+    NULL::uuid AS id_station,
+    NULL::uuid AS id_projet,
+    NULL::uuid AS id_consultation,
+    NULL::text AS besoin_consultation,
+    NULL::timestamp without time zone AS datecreation_consultation,
+    NULL::khepri.type_travaux AS typetravaux_consultation,
+    NULL::uuid AS id_lot,
+    NULL::khepri.type_charge AS typecharge_lot,
+    NULL::character varying AS designation_lot,
+    NULL::integer AS ordre_lot,
+    NULL::uuid AS id_utilisateur,
+    NULL::bigint AS number_documents_consultation;
+pg_restore: error: could not execute query: ERROR:  schema "khepri" does not exist
+LINE 5:     NULL::khepri.statut_projet AS statut_projet,
+                  ^
+Command was: CREATE OR REPLACE VIEW khepri.v_dto_projets_travaux AS
+SELECT
+    NULL::uuid AS pk_travaux,
+    NULL::uuid AS pk_projet,
+    NULL::khepri.statut_projet AS statut_projet,
+    NULL::timestamp without time zone AS date_valide_debut_travaux,
+    NULL::timestamp without time zone AS date_valide_fin_travaux,
+    NULL::timestamp without time zone AS date_valide_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_valide_livraison_materiel,
+    NULL::timestamp without time zone AS date_reelle_debut_travaux,
+    NULL::timestamp without time zone AS date_reelle_fin_travaux,
+    NULL::timestamp without time zone AS date_reelle_mise_disposition_materiel,
+    NULL::timestamp without time zone AS date_reelle_livraison_materiel,
+    NULL::boolean AS attente_devis;
+pg_restore: warning: errors ignored on restore: 3
